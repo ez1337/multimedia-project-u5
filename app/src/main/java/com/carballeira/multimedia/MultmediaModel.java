@@ -4,12 +4,30 @@ public class MultmediaModel {
     private String title;
     private String description;
     private int image;
+    private int uri;
+    private String url;
     private MediaType type;
 
+    public MultmediaModel(String title, String description, int image, int uri, MediaType type) {
+        this.title = title;
+        this.description = description;
+        this.image = image;
+        this.uri = uri;
+        this.type = type;
+    }
+
+    public MultmediaModel(String title, String description, int image, String url, MediaType type) {
+        this.title = title;
+        this.description = description;
+        this.image = image;
+        this.url = url;
+        this.type = type;
+    }
+
     public enum MediaType{
-        Video,
-        Audio,
-        Web
+        VIDEO,
+        AUDIO,
+        WEB
     }
 
     public String getTitle() {
